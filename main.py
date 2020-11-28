@@ -1,30 +1,41 @@
-def showMenu():
-    print("กด 1 เพื่อคำนวณพื้นที่สี่เหลี่ยม")
-    print("กด 2 เพื่อคำนวณพื้นที่สามเหลี่ยม")
-    pass
+"""
+Loop
+
+while <:condition> :
+    statements
+
+for <:variable> in <:iterable> :
+    statements
+
+"""
+
+"""
+เขียนโปรแกรมเพื่อพิมพ์เลข 1-10 ออกทางจอภาพ
+1
+2
+...
+10
 
 
-def calRectangleArea():
-    a:float = float(input('Enter high'))
-    b:float = float(input('Enter width'))
-    c:float = a * b
-    print(c)
-    pass
+# for
+for i in range(1, 10 + 1):
+    print(i)
+    
+# while
+sp = 1
+st = 10
+while sp <= st:
+    print(sp)
+    sp += 1
+"""
 
-
-def calTriangleArea():
-    b : float = float(input("Enter your base = "))
-    h : float = float(input("Enter your High = "))
-    area = 1/2 * b * h
-    print(area)
-    pass
-
-def main():
-    showMenu()
-    choice: int = int(input("Select Menu : "))
-    if choice == 1:
-        calRectangleArea()
+def pr(st: int, sp: int) -> None:
+    if st == sp:
+        print(st)
     else:
-        calTriangleArea()
+        pr(st + 1, sp)
+        print(st)
 
-main()
+
+
+pr(1,10)
