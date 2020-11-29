@@ -1,12 +1,11 @@
 """
 Exercise 1 : Basic Filtering
-ให้ scores เป็นลิสต์ของคะแนนของนักเรียน
-อยากรู้ว่ามีนักเรียนกี่คนที่ได้เกรด A
-grade :
-    7-10 A
-    5-7  B
-    0-5  C
-"""
+ให้ scores เป็นลิสต์ของคะแนนของนักเรียน อยากรู้ว่ามีนักเรียนกี่คนที่ได้เกรด A
+grade :     7-10 A
+            5-7  B
+            0-5  C       """
+
+
 def grader(score):
     if 7 <= score <= 10:
         return 'A'
@@ -15,5 +14,8 @@ def grader(score):
     else:
         return 'C'
 
+
 scores = [8, 7, 6, 5, 4, 6, 1, 2, 5, 6, 9, 8, 7, 4, 5, 10, 7, 5]
-#write your code after here.
+# write your code after here.
+grades = list(map(lambda x: grader(x), scores))
+print(grades)
